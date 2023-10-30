@@ -1,25 +1,14 @@
-# Use an official Node runtime as the base image
-FROM node:18.17
-
-# Set the working directory in the container
+### STAGE 1: Build Angular app ###
+FROM node AS build
 WORKDIR /app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-RUN npm install -g npm@10.2.1
-
-# Install application dependencies
-RUN npm install --legacy-peer-deps --force
-
-# Copy the rest of the application source code
+COPY package.json package-lock.json ./
+RUN npm cache clean --force
 COPY . .
+RUN npm install --legacy-peer-deps --force
+RUN npm run build --prod
 
-# Build the Angular app
-RUN npm run build
-
-# Expose a port (if your application runs on a specific port)
+### STAGE 2: Run with Nginx ###
+FROM nginx:latest AS ngi
+COPY --from=build /app/dist/crudtuto-Front /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-
-# Start the Angular app
-CMD ["npm", "start"]

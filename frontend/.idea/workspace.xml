@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6193360-8124-40cb-a11f-35db2653a785" name="Changes" comment="" />
+    <list default="true" id="e6193360-8124-40cb-a11f-35db2653a785" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/crud-tuto-front/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/achat/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/achat/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud-tuto-front/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/crud-tuto-front/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud-tuto-front/src/app/shared/Service/Facture.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crud-tuto-front/src/app/shared/Service/Facture.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +37,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\moez\\Documents\\DevOps\\achat\\achat_deploy\\frontend\\crud-tuto-front\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -45,6 +52,13 @@
       <workItem from="1697937520175" duration="925000" />
       <workItem from="1697938506984" duration="5595000" />
       <workItem from="1697976158655" duration="1188000" />
+      <workItem from="1698321222565" duration="1944000" />
+      <workItem from="1698380072556" duration="120000" />
+      <workItem from="1698412268586" duration="91000" />
+      <workItem from="1698412847134" duration="1169000" />
+      <workItem from="1698564107276" duration="42000" />
+      <workItem from="1698564476562" duration="19000" />
+      <workItem from="1698676583693" duration="500000" />
     </task>
     <servers />
   </component>
