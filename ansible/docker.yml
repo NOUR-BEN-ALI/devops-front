@@ -1,5 +1,8 @@
-- hosts: localhost
-  gather_facts: true
-  become: false
-  roles:
-    - role: docker
+---
+- name: Build Docker image using Ansible
+  hosts: localhost
+  tasks:
+    - name: Build Docker image
+      docker_image:
+        name: "angularapp"  # Specify your desired image name
+        path: .  # Path to the directory containing your Dockerfile
