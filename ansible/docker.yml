@@ -1,8 +1,7 @@
 ---
-- name: Build Docker image using Ansible
+- name: Create Docker Image using 'docker' command
   hosts: localhost
   tasks:
-    - name: Build Docker image
-      docker_image:
-        name: "angularapp"  # Specify your desired image name
-        path: .  # Path to the directory containing your Dockerfile
+    - name: Build Docker Image
+      become: yes  # This enables running commands with elevated privileges (sudo)
+      command: docker build -t angularapp .
