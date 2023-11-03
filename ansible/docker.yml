@@ -1,6 +1,6 @@
 ---
 - name: Build Docker image using Ansible
-  hosts: 172.17.0.1
+  hosts: localhost
   tasks:
     - name: Build Docker image
       docker_image:
