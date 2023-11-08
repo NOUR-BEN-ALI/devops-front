@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: s=angular-app
+        app: angular-app
     spec:
       containers:
         - name: my-angular-app
