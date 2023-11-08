@@ -32,7 +32,7 @@ spec:
     - name: http
       port: 80
       protocol: TCP
-      targetPort: 8085
+      targetPort: 8099
   type: LoadBalancer
   selector:
     app: angular-app
