@@ -1,7 +1,0 @@
----
-- name: Create Docker Image using 'docker' command
-  hosts: localhost
-  tasks:
-    - name: Build Docker Image
-      become: yes  # This enables running commands with elevated privileges (sudo)
-      command: docker build -t angularapp .

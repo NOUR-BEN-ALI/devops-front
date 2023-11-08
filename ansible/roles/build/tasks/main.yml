@@ -1,2 +1,0 @@
-- name: build app
-  shell: ng build --configuration production
