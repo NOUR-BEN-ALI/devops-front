@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-angular-app
-          image: myacrrepo063719.azurecr.io/myacrrepo063719:latest
+          image: myacrrepo063719.azurecr.io/achat_frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8099
