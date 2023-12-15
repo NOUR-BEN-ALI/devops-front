@@ -1,9 +1,14 @@
+### STAGE 1: Build Angular app ###
 FROM node AS build
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install --legacy-peer-deps --force
+RUN npm cache clean --force
 COPY . .
+RUN npm install --legacy-peer-deps --force
 RUN npm run build --prod
 
-FROM nginx:latest
-COPY --from=build /usr/src/app/dist/crudtuto-Front /usr/share/nginx/html
+### STAGE 2: Run with Nginx ###
+FROM nginx:latest AS ngi
+COPY --from=build /app/dist/crudtuto-Front /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
